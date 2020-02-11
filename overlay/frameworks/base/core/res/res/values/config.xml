@@ -542,4 +542,7 @@
     <!-- Whether the device has outdated qti-telephony-common.jar -->
     <bool name="config_oldQtiTelephony">false</bool>
 
+    <!-- We dont not have a multicolored LED -->
+    <bool name="config_multiColorBatteryLed">false</bool>
+
 </resources>
