@@ -77,7 +77,7 @@ AUDIO_FEATURE_ENABLED_EXT_AMPLIFIER := false
 AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_USES_ALSA_AUDIO := true
-USE_CUSTOM_AUDIO_POLICY := 1
+# USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
 
 # Bootloader
@@ -190,6 +190,7 @@ TARGET_PER_MGR_ENABLED := true
 BOARD_USES_QCOM_HARDWARE := true
 
 # QCOM variant
+TARGET_QCOM_BLUETOOTH_VARIANT := caf-msm8996
 TARGET_QCOM_AUDIO_VARIANT := caf-msm8996
 TARGET_QCOM_DISPLAY_VARIANT := caf-msm8996
 TARGET_QCOM_MEDIA_VARIANT := caf-msm8996
@@ -205,7 +206,8 @@ TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/rootdir/fstab.qcom
 endif
 
 # SELinux
-include device/qcom/sepolicy-legacy-um/sepolicy.mk
+include device/qcom/sepolicy/sepolicy_legacy.mk
+include vendor/omni/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 
 SELINUX_IGNORE_NEVERALLOWS := true
